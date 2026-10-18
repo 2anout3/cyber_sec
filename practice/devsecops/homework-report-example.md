@@ -102,7 +102,7 @@ docker run --rm -v "${PWD}/src:/src" -e SEMGREP_APP_TOKEN=<token> semgrep/semgre
 | Версия | Результат | Правило |
 | --- | --- | --- |
 | Уязвимая | TP | [правило](https://github.com/semgrep/semgrep-rules/blob/develop/java/spring/security/injection/tainted-file-path.yaml) |
-| Исправленная | TN | [правило](https://github.com/semgrep/semgrep-rules/blob/develop/java/spring/security/injection/tainted-file-path.yaml) |
+| Исправленная | FP | [правило](https://github.com/semgrep/semgrep-rules/blob/develop/java/spring/security/injection/tainted-file-path.yaml) |
 
 ### 3.1. Уязвимая версия
 
