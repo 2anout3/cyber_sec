@@ -51,11 +51,11 @@ public class FileController {
     )
     @PostMapping(value = "/files", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
-        
+
         // if (!isAllowedImageType(file)) {
         //     return ResponseEntity.badRequest().body("Разрешены только файлы PNG и JPEG");
-        // }   
-        
+        // }
+
         Path uploadPath = Paths.get(UPLOAD_DIR);
         Files.createDirectories(uploadPath);
 
@@ -69,7 +69,7 @@ public class FileController {
     public ResponseEntity<Resource> getFile(@RequestParam String filename) throws IOException {
         Path filePath = Paths.get(UPLOAD_DIR).resolve(filename).normalize();
         Path uploadDir = Paths.get(UPLOAD_DIR).toAbsolutePath().normalize();
-        
+
         log.info("uploadDir: {}", uploadDir);
         log.info("filePath: {}", filePath);
 
